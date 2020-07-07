@@ -1,0 +1,12 @@
+.card img {
+    max-height: 350px;
+}
+
+.card-text {
+    color:#636b6f;
+}
+
+.free {
+    font-weight: bold;
+    font-size: 16px ;
+}

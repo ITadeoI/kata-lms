@@ -13,6 +13,7 @@
     @yield('styles')
 </head>
 <body>
+@include('partials.header')
 
 <div class="container">
     @yield('content')
