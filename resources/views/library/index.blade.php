@@ -18,7 +18,7 @@
                                 <p>Free</p>
                             </div>
                             <div class="float-right">
-                                <a href="#" class="btn btn-success">borrow</a>
+                                <a href="{{ route('book.addToBorrow', ['id' => $book->id]) }}" class="btn btn-success">borrow</a>
                             </div>
                         </div>
                     </div>

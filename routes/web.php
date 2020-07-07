@@ -18,6 +18,11 @@ Route::get('/', [
     'as' => 'book.index'
 ]);
 
+Route::get('add-to-Borrow/{id}', [
+    'uses' => 'BookController@getAddToBorrow',
+    'as' => 'book.addToBorrow'
+]);
+
 Route::group(['prefix' => 'user'], function() {
     Route::group(['middleware' => 'guest'], function() {
         Route::get('/signup', [
