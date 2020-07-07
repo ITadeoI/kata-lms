@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('library.index');
-});
+Route::get('/', [
+    'uses' => 'BookController@getIndex',
+    'as' => 'book.index'
+]);
