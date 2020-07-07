@@ -19,11 +19,26 @@ Route::get('/', [
 ]);
 
 Route::get('/signup', [
-    'uses' => 'UserController@getSignup',
+    'uses' => 'UserController@getSignUp',
     'as' => 'user.getsignup'
 ]);
 
 Route::post('/signup', [
-    'uses' => 'UserController@postSignup',
+    'uses' => 'UserController@postSignUp',
     'as' => 'user.postsignup'
+]);
+
+Route::get('/signin', [
+    'uses' => 'UserController@getSignIn',
+    'as' => 'user.getsignin'
+]);
+
+Route::post('/signin', [
+    'uses' => 'UserController@postSignIn',
+    'as' => 'user.postsignin'
+]);
+
+Route::get('/user/profile', [
+    'uses' => 'UserController@getProfile',
+    'as' => 'user.profile'
 ]);
