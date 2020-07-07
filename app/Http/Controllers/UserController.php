@@ -26,7 +26,9 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect()->route('book.index');
+        Auth::logout($user);
+
+        return redirect()->route('user.profile');
     }
 
     public function getSignIn() {
@@ -49,5 +51,12 @@ class UserController extends Controller
 
     public function getProfile() {
         return view('user.profile');
+    }
+
+    public function getLogout() {
+
+        Auth::logout();
+
+        return redirect()->route('book.index');
     }
 }
