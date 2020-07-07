@@ -17,3 +17,13 @@ Route::get('/', [
     'uses' => 'BookController@getIndex',
     'as' => 'book.index'
 ]);
+
+Route::get('/signup', [
+    'uses' => 'UserController@getSignup',
+    'as' => 'user.getsignup'
+]);
+
+Route::post('/signup', [
+    'uses' => 'UserController@postSignup',
+    'as' => 'user.postsignup'
+]);
