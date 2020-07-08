@@ -13,7 +13,7 @@
         <ul class="navbar-nav nav-bar-right">
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('library.borrowstorage') }}">
-                    <i class="fas fa-book"></i> Books
+                    <i class="fas fa-book"></i> Books Borrow
                     <span class="badge badge-primary"> {{ Session::has('borrow') ? count(Session::get('borrow')->books) : ''}}</span>
                 </a>
             </li>

@@ -13,7 +13,7 @@
                         <img src="{{ $book->image_path }}" alt="...">
                         <div class="card-body">
                             <div class="mx-auto">
-                                <a href="{{ route('book.addToBorrow', ['id' => $book->id]) }}" class="btn btn-success btn-lg btn-block">Return</a>
+                                <a href="{{ route('book.removeFromBorrow', ['id' => $book->id]) }}" class="btn btn-success btn-lg btn-block">Return</a>
                             </div>
                         </div>
                     </div>

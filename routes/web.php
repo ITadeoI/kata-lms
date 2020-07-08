@@ -23,6 +23,11 @@ Route::get('add-to-Borrow/{id}', [
     'as' => 'book.addToBorrow'
 ]);
 
+Route::get('remove-from-borrow/{id}', [
+    'uses' => 'BookController@removeBookFromBorrowStorage',
+    'as' => 'book.removeFromBorrow'
+]);
+
 Route::get('borrow-storage', [
     'uses' => 'BookController@getBorrowStorage',
     'as' => 'library.borrowstorage'

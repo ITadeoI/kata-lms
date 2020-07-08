@@ -18,4 +18,12 @@ class Borrow
     public function add($book, $id) {
         $this->books[$id] = $book;
     }
+
+    public function remove($id) {
+        unset($this->books[$id]);
+    }
+
+    public function getCount() {
+        return count($this->books);
+    }
 }
