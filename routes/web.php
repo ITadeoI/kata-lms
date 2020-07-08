@@ -23,6 +23,11 @@ Route::get('add-to-Borrow/{id}', [
     'as' => 'book.addToBorrow'
 ]);
 
+Route::get('borrow-storage', [
+    'uses' => 'BookController@getBorrowStorage',
+    'as' => 'library.borrowstorage'
+]);
+
 Route::group(['prefix' => 'user'], function() {
     Route::group(['middleware' => 'guest'], function() {
         Route::get('/signup', [
