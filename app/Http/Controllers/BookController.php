@@ -11,7 +11,7 @@ class BookController extends Controller
 {
     public function getIndex() {
 
-        $books = Book::all();
+        $books = Book::all()->where('is_avaliable','=',1);
 
         return view('library.index',['books' => $books]);
     }
@@ -23,7 +23,7 @@ class BookController extends Controller
         $borrow->add($book, $book->id );
 
         $request->session()->put('borrow', $borrow);
-//        dd($request->session()->get('borrow'));
+        dd($request->session()->get('borrow'));
         return redirect()->route('book.index');
     }
 }

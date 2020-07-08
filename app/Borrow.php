@@ -12,7 +12,7 @@ class Borrow
     public function __construct($oldBorrow)
     {
         if ($oldBorrow) {
-            $this->books = $oldBorrow->items;
+            $this->books = $oldBorrow->books;
             $this->totalBooks = $oldBorrow->totalBooks;
         }
     }
