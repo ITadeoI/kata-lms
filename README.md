@@ -1,79 +1,85 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Library
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+This project is my proposal to the Hexad's exercise, create a LMS (library management system).
 
-## About Laravel
+##First thoughts 
+#####Solution: 
+&nbsp;&nbsp;Create a simple mockup using Laravel Framework (MVC pattern).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Day:1
+ 
+I had a lot of problem to create an stable enviorement because I never used Linux before. I had issue installing Apache and to redirect correctly to my virtual host.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Day:2
 
-## Learning Laravel
+I spent time to configurate Laravel, Db and read articles, stackoverflow, to find how to resolve incompatibilities with Mint (Linux), once resolved, I could makee my first commit with a stable environment.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Day: 2-3
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+I was spending all the time to finish all the user cases descripted on the Assigment_Library_Management.pdf
 
-## Laravel Sponsors
+Day: 3
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Create the last part of my project and fix some bugs.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
+## How to improve my project
+It would more interesting create a DDD project structure, but I don't have enough knowledge yet.
+
+##Conclusions
+I'm pretty proud of my solution, but I little bit angry with myself because I realized that I don't know how to create a correct battery of test.
+I mean, I know how it works TDD and phpunit, but when I want to apply in my project I was stuck because I dont' know how to start them.
+I need to work more hard to be better with TDD and phpunit. I'm working to create more test.
+
+
+## How to run this Project
+
+1. Clone the repository or unzip file (attached on the email) on your local system copy library.
+
+    &nbsp;&nbsp;1.1 I used LAMP because I've Linux S.O, but you can download XAMPP which works for all the S.O: https://www.apachefriends.org/index.html
+
+2. Put library folder inside root directory: /opt/lampp/htdocs for Linux.
+
+## Database Configuration
+
+3.Set up you DB in the .env, which is located in the root of my project.
+4.When you will set up your db, open a terminal and write these commands below. 
+```bash
+php artisan migrate
+php artisan db:seed
+```
+&nbsp;&nbsp; php artisan migrate: 
+This command creates all the tables needed for my project (app/database/migrations/..)
+
+&nbsp;&nbsp; php artisan db:seed
+This command fills the tables with data (app/database/seeds/..)
+
+5. Open a browser put inside url browser "http://laravel.test/" (remember create a domain on host file)
+
+# VirtualHost for laravel.lms
+
+<VirtualHost 127.0.0.5:80>
+  DocumentRoot "/opt/lampp/htdocs/kata-lms/public"
+  ServerAdmin laravel.home
+
+  <Directory "/opt/lampp/htdocs/kata-lms">
+	Options Indexes FollowSymLinks
+	AllowOverride All
+	Require all granted
+  </Directory>
+</VirtualHost>
+
+## Technology
+* php: ^7.2.5.
+* Laravel/framework": ^7.0.
+* Database: MariaDbi with eloquent ORM by Laravel.
+* Software: LAMP (Linux, Apache, MariaDb, Php).
+* FrontEnd: Bootstrap, Html5.
+
+##Basic Test
+```bash
+php artisan test
+```
 
 ## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+https://github.com/ITadeoI/kata-lms. (private)
