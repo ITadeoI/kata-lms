@@ -1,4 +1,4 @@
-## How to run this Project
+## How to run
 
 1. Clone the repository or unzip file (attached on the email) on your local system copy library.
 
@@ -22,7 +22,7 @@ This command fills the tables with data (app/database/seeds/..)
 
 5. Open a browser put inside url browser "http://laravel.test/" (remember create a domain on host file)
 
-# VirtualHost for laravel.lms
+# VirtualHost
 
 <VirtualHost 127.0.0.5:80>
   DocumentRoot "/opt/lampp/htdocs/kata-lms/public"
