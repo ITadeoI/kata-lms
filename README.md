@@ -1,37 +1,3 @@
-# Library
-
-This project is my proposal to the Hexad's exercise, create a LMS (library management system).
-
-##First thoughts 
-#####Solution: 
-&nbsp;&nbsp;Create a simple mockup using Laravel Framework (MVC pattern).
-
-Day:1
- 
-I had a lot of problem to create an stable enviorement because I never used Linux before. I had issue installing Apache and to redirect correctly to my virtual host.
-
-
-Day:2
-
-I spent time to configurate Laravel, Db and read articles, stackoverflow, to find how to resolve incompatibilities with Mint (Linux), once resolved, I could makee my first commit with a stable environment.
-
-Day: 2-3
-
-I was spending all the time to finish all the user cases descripted on the Assigment_Library_Management.pdf
-
-Day: 3
-
-Create the last part of my project and fix some bugs.
-
-## How to improve my project
-It would more interesting create a DDD project structure, but I don't have enough knowledge yet.
-
-##Conclusions
-I'm pretty proud of my solution, but I little bit angry with myself because I realized that I don't know how to create a correct battery of test.
-I mean, I know how it works TDD and phpunit, but when I want to apply in my project I was stuck because I dont' know how to start them.
-I need to work more hard to be better with TDD and phpunit. I'm working to create more test.
-
-
 ## How to run this Project
 
 1. Clone the repository or unzip file (attached on the email) on your local system copy library.
