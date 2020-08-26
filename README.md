@@ -46,6 +46,3 @@ This command fills the tables with data (app/database/seeds/..)
 ```bash
 php artisan test
 ```
-
-## Contributing
-https://github.com/ITadeoI/kata-lms. (private)
